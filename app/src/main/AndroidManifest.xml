@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".observer.Test1Activity" />
+        <activity android:name=".observer.Test2Activity"></activity>
     </application>
 
 </manifest>

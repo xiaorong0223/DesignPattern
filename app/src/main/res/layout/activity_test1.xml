@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codingsnail.designpattern.observer.Test1Activity">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="当前为登录状态，我是用户张三"
+        android:textColor="#333333"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/tv_jump"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="跳转"
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
+
+</RelativeLayout>
