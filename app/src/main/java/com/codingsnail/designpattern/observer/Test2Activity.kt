@@ -19,11 +19,9 @@ class Test2Activity : AppCompatActivity() {
                 val accountListeners = ListenerManager.accountListeners
                 accountListeners.entries.forEach {
                     val ref = it.value
-                    if (ref?.get() != null) {
-                        val listener = ref.get()
-                        listener!!.onAccountLogout()
-                        finish()
-                    }
+                    val listener = ref!!.get()
+                    listener!!.onAccountLogout()
+                    finish()
                 }
 
                 /**  出现莫名错误以后去发掘 ****/
@@ -31,11 +29,9 @@ class Test2Activity : AppCompatActivity() {
 //                while (keys.iterator().hasNext()) {
 //                    val key = keys.iterator().next()
 //                    val ref = ListenerManager.accountListeners[key]
-//                    if (ref?.get() != null) {
-//                        val listener = ref.get()
-//                        listener!!.onAccountLogout()
-//                        finish()
-//                    }
+//                    val listener = ref!!.get()
+//                    listener!!.onAccountLogout()
+//                    finish()
 //                }
             }
         }

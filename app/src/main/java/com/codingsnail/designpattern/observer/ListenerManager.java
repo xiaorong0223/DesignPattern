@@ -2,7 +2,6 @@ package com.codingsnail.designpattern.observer;
 
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
-import java.util.Set;
 
 /**
  * Created by Snail on 12/18/2017 7:18 PM
@@ -14,25 +13,22 @@ public class ListenerManager {
 
     public static void registerAccountListener(String key, AccountListener listener) {
         synchronized (accountListeners) {
-            WeakReference<AccountListener> ref = accountListeners.get( key );
+            WeakReference<AccountListener> ref = accountListeners.get(key);
             if (ref != null && ref.get() != null) {
                 ref.clear();
             }
-            accountListeners.put( key, new WeakReference<>( listener ) );
-            Set<String> set = accountListeners.keySet();
+            accountListeners.put(key, new WeakReference<>(listener));
         }
-
     }
-
 
 
     public static void unregisterAccountListener(String key) {
         synchronized (accountListeners) {
-            WeakReference<AccountListener> ref = accountListeners.get( key );
+            WeakReference<AccountListener> ref = accountListeners.get(key);
             if (ref != null && ref.get() != null) {
                 ref.clear();
             }
-            accountListeners.remove( key );
+            accountListeners.remove(key);
         }
     }
 }
