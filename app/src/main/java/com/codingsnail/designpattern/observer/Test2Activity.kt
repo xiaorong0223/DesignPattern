@@ -25,14 +25,15 @@ class Test2Activity : AppCompatActivity() {
                 }
 
                 /**  出现莫名错误以后去发掘 ****/
-//                val keys = ListenerManager.accountListeners.keys
-//                while (keys.iterator().hasNext()) {
-//                    val key = keys.iterator().next()
-//                    val ref = ListenerManager.accountListeners[key]
-//                    val listener = ref!!.get()
-//                    listener!!.onAccountLogout()
-//                    finish()
-//                }
+                val keys = ListenerManager.accountListeners.keys
+                val iterator = keys.iterator()
+                while (iterator.hasNext()) {
+                    val key = keys.iterator().next()
+                    val ref = ListenerManager.accountListeners[key]
+                    val listener = ref!!.get()
+                    listener!!.onAccountLogout()
+                    finish()
+                }
             }
         }
     }
